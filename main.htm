@@ -1,0 +1,281 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+    font-family: 'Karma', sans-serif; list-style: none; margin:0; padding: 0;
+}
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 0px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 35px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+}
+#menu
+{
+  position: absolute;
+  width: 500px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: white;
+  list-style-type: none;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 30px;
+  margin: 20px;
+}
+#menu li:hover{
+  background-color: gray;
+}
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+.first{ border-bottom:1px solid gray ;}
+.mid{ margin-top: 50px;  margin-bottom: 50px;}
+.mido{border-bottom:1px solid gray ; }
+.tex{padding: 20px; font-family: "Karma",sans-serif; text-align: center; font-size: 20; }
+.text4{padding-bottom:0px; font-family: "Karma",sans-serif; text-align: center; padding-left: 20px; padding-right: 20px; font-size: 20;}
+.text3{padding: 20px; font-family: "Karma",sans-serif; text-align: right; font-size: 20; }
+.header{padding: 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;  }
+.row{ padding: 20px; display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;}
+.center{display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:100%;
+height: auto;}
+h3{ font-family: "Karma",sans-serif; font-size: 25; font-weight: normal;}
+.item{
+   padding: 2px; margin: 1px;  background-color: black; text-align: center; color: white; border: 1px;border-color: white;
+}
+.last{
+    height: 50px; width:50px; border: 1px solid black; margin: 2px;
+}
+.special{
+    padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex-wrap: wrap;
+}
+img{
+     max-width:100%; max-height: 100%; max-height: 500px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+.colf-3 {width: 15%; align-items: flex-start;}
+.colf-9 {width: 85%;}
+.row1{ padding: 5px; border-bottom: 1px solid gray; display: flex; flex-direction: row;}
+
+@media only screen and (min-width: 600px) {*/
+  /* For desktop: */
+   .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .special{ flex-direction: row;}
+  .final{
+    margin-left: 3%; margin-right: 3%;
+}
+}
+.it{ padding: 10px;}
+</style>
+</head>
+<body>
+<div class="final">
+ <div class="header"> 
+ <div class="ham1">
+<nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <a href="#"><li>Food</li></a>
+        <a href="#"><li>About</li></a>
+      </ul>
+    </div>
+  </nav>
+ </div>
+ <div class="tex" align="center" ><center>My Food</center></div>
+ <div class="text3" align="right" >Mail</div>
+</div>
+<div class="row">
+    <div class="col-3 ">
+      <div class="it">
+        <img src="img/sandwich.jpg">
+        <h3>The Perfect Sandwich, A Real NYC Classic</h3> 
+        <p>THis is the best sandwich you would ever eat in you life.Just try and get mesmerized. </p>
+        </div>
+    </div>
+    <div class="col-3 ">
+      <div class="it">
+        <img src="img/steak (1).jpg">
+        <h3>Let Me Tell You About This Steak</h3> 
+        <p>THis is the best sandwich you would ever eat in you life.Just try and get mesmerized. </p>
+      </div>
+    </div>
+    <div class="col-3 ">
+      <div class="it">
+        <img src="img/cherries.jpg">
+        <h3>Cherries, interrupted</h3> 
+        <p>Lorem ipsum text praesent tincidunt ipsum lipsum. </p>
+      </div>
+    </div>
+    <div class="col-3 ">
+      <div class="it">
+        <img src="img/wine.jpg">
+        <h3>Once Again, Robust Wine and Vegetable Pasta</h3> 
+        <p>Lorem ipsum text praesent tincidunt ipsum lipsum. </p>
+      </div>
+    </div>
+</div>
+<div class="first">
+<div class="row">
+    <div class="col-3">
+      <div class="it">
+        <img src="img/popsicle.jpg">
+        <h3>All I Need Is a Popsicle</h3> 
+        <p>Lorem ipsum text praesent tincidunt ipsum lipsum. </p>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="it">
+        <img src="img/salmon.jpg">
+        <h3>Salmon For Your Skin</h3> 
+        <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum. </p>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="it">
+        <img src="img/sandwich.jpg">
+        <h3>The Perfect Sandwich, A Real Classic</h3> 
+        <p>Lorem ipsum text praesent tincidunt ipsum lipsum. </p>
+      </div>  
+    </div>
+    <div class="col-3">
+      <div class="it">
+        <img src="img/croissant.jpg">
+        <h3>Le French</h3> 
+        <p>Lorem ipsum text praesent tincidunt ipsum lipsum. </p>
+      </div>  
+    </div>
+</div>
+</div>
+<div class="mido">
+<div class="mid">
+<div class="text4"><CENTER>About Me,The Food Man</CENTER></div>
+<div class="row"><img src="img/chef.jpg" class="center"></div>
+<div class="text4"><CENTER><h4>I am Who I Am!</h4> </CENTER></div>
+<div class="text4">
+<p class="text4"><CENTER>With Passion For Real, Good Food</CENTER></p>
+<p class="text4"> Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>    
+</div>
+</div>
+</div>
+<div class="special">
+    <div class="col-4"> 
+        <p class="tex">FOOTER</p>
+        <p class="text4">Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p class="text4">Powered by w3.css</p> 
+    </div>
+    <div class="col-4"> 
+        <p class="tex">BLOG POSTS</p>
+        <div class="row1">
+          <div class="colf-3">
+          <img src="img/workshop.jpg" class="last">
+          </div>
+          <div class="colf-9">
+            <div>Lorem</div>
+            <div>Sed mattis nunc</div> 
+          </div> 
+        </div>
+        <div class="row1">
+          <div class="colf-3">
+          <img src="img/gondol.jpg" class="last">
+          </div>
+          <div class="colf-9">
+            <div>Ipsum</div>
+            <div>Praes tinci sed</div> 
+          </div> 
+        </div>
+    </div>
+    <div class="col-4"> 
+        <p class="tex">POPULAR TAGS</p>
+        <div class="row">
+        <div class="item">Travel</div>
+        <div class="item">New York</div>
+        <div class="item">Dinner</div>
+        <div class="item">Salmon</div>
+        <div class="item">France</div>
+        <div class="item">Drinks</div>
+        <div class="item">Ideas</div>
+        <div class="item">Flavor</div>
+        <div class="item">Chicken</div>
+        <div class="item">Dressing</div>
+        <div class="item">Fish</div>
+        </div>
+    </div>
+
+</div>
+</div>
+</body>
+</html>
