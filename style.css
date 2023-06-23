@@ -1,0 +1,134 @@
+*{
+    font-family: 'Karma', sans-serif; list-style: none; margin:0; padding: 0;
+}
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 0px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 35px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+}
+#menu
+{
+  position: absolute;
+  height: 100vh;
+  width: 500px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: white;
+  list-style-type: none;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 30px;
+  margin: 20px;
+}
+#menu li:hover{
+  background-color: gray;
+}
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+.header{padding: 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;  }
+.first{ border-bottom:1px solid gray ; margin: 0;}
+.row{ padding: 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}
+.it{ padding: 10px; width: 327px;}
+.mid{ margin-top: 50px;  margin-bottom: 50px;}
+.mido{border-bottom:1px solid gray ; }
+.tex{padding: 20px; font-family: "Karma",sans-serif; text-align: center; font-size: 20; }
+.text4{padding-bottom:0px; font-family: "Karma",sans-serif; text-align: center; padding-left: 20px; padding-right: 20px; font-size: 20;}
+.text3{padding: 20px; font-family: "Karma",sans-serif; text-align: right; font-size: 20; }
+
+.center{display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:100%;
+  height: auto;}
+h3{ font-family: "Karma",sans-serif; font-size: 25; font-weight: normal;}
+.item{
+   padding: 2px; margin: 1px;  background-color: black; text-align: center; color: white; border: 1px;border-color: white;
+}
+.footer-img{
+    height: 50px; width:50px; border: 1px solid black; margin: 2px;
+}
+img{
+     max-width:100%; max-height: 100%; max-height: 500px; 
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+.colf-3 {width: 15%; align-items: flex-start;}
+.colf-9 {width: 85%;}
+.rowl{ padding: 5px; border-bottom: 1px solid gray; display: flex; flex-direction: row;}
+
+@media only screen and (min-width: 800px) {*/
+  /* For desktop: */
+   .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .colf-3 {width: 25%; align-items: flex-start;}
+  .colf-9 {width: 75%;}
+  .final{
+    margin-left: 3%; margin-right: 3%;
+}
+}
